@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.Container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 248, 239);
+}
+
+.Settings {
+    float: right;
+    height: 100%;
+    width: 17%;
+    
+}
+
+.TextArea {
+    resize: none;
+    position: inherit;
+    width: 95%;
+    height: 150px;
+    background-color: ghostwhite;
+}
+.TextArea2 {
+    resize: none;
+    position: inherit;
+    width: 95%;
+    height: 20px;
+    background-color: ghostwhite;
+}
+
+.Visualization {
+    position: relative;
+    margin: 2px;
+    border-style: solid;
+    border-width: thin;
+    background-color: rgb(43 42 42);
+    width: 82%;
+    height: 99%;
+}
+
+.Button {
+    position: inherit;
+    top: 2px;
+    width: 97%;
+}
+
+.SearchButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: inherit;
+    top: 2px;
+    width: 97%;
+}
+
+.SortCombo {
+    position: inherit;
+    margin-right: 14px;
+}
+
+.ShowButton {
+    position: inherit;
+    margin-bottom: 4px;
+    width: 97%;
+}
