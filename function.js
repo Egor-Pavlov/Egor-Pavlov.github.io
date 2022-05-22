@@ -3,6 +3,10 @@ var speed;
 
 var SortInProgress = false;
 
+function load() {
+    document.querySelector("#sizespin").disabled = true;
+}
+
 // Когда меняется чекбокс с автоматикой
 function CheckChanged() {
     var check = document.getElementById('check');
@@ -132,6 +136,10 @@ async function ChooseSort()
     }
 }
 
+function closesidepannel() {
+    document.getElementById("sidepanel").style.width = "0";
+}
+
 async function Sort()
 {
     if (arr.length == 0)
@@ -151,6 +159,8 @@ async function Sort()
         alert("Массив не задан! Укажите его, или выберите автоматическое заполнение!");
         return;        
     }
+    
+    closesidepannel();
 
     SortInProgress = true;
 
@@ -186,6 +196,8 @@ async function Search()
         alert("Не введено число для поиска");
         return;
     }
+
+    closesidepannel();
 
     SortInProgress = true;
 

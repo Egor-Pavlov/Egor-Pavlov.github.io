@@ -4,65 +4,133 @@ html, body {
 }
 
 .Container {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: rgb(255, 248, 239);
+  display: flex;
+  height: 100%;
+  flex-flow: column;
 }
 
-.Settings {
-    float: right;
-    height: 100%;
-    width: 17%;
-    
+.settings {
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.TextArea {
-    resize: none;
-    position: inherit;
-    width: 95%;
-    height: 150px;
-    background-color: ghostwhite;
-}
-.TextArea2 {
-    resize: none;
-    position: inherit;
-    width: 95%;
-    height: 20px;
-    background-color: ghostwhite;
+.settings-block {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  width: 80%;
+  margin: 10px auto;
+  border-top: 2px solid #818181;
 }
 
-.Visualization {
-    position: relative;
-    margin: 2px;
-    border-style: solid;
-    border-width: thin;
-    background-color: rgb(43 42 42);
-    width: 82%;
-    height: 99%;
+.settings-block input {
+  font-size: x-large;
+  padding: 10px;
 }
 
-.Button {
-    position: inherit;
-    top: 2px;
-    width: 97%;
+.settings-block textarea {
+  padding: 10px;
+  font-size: larger;
 }
 
-.SearchButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    position: inherit;
-    top: 2px;
-    width: 97%;
+.settings-block select {
+  font-size: larger;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .SortCombo {
-    position: inherit;
-    margin-right: 14px;
+  margin-bottom: 25px;
 }
 
-.ShowButton {
-    position: inherit;
-    margin-bottom: 4px;
-    width: 97%;
+.check {
+  transform: scale(2);
+  margin-right: 30px;
+}
+
+.settings-block button {
+  font-size: x-large;
+  font-family: 'Oswald', sans-serif;
+  padding: 10px 30px;
+}
+
+.settings-block:last-child {
+  border-bottom: 2px solid #818181;
+  padding-bottom: 20px;
+}
+
+.settings label {
+  font-size: 40px;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.Visualization {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-width: thin;
+  background-color: rgb(43 42 42);
+} 
+
+.sidepanel {
+  font-family: 'Oswald', sans-serif;
+  color: #f1f1f1;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background: rgb(19,19,19);
+  background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(19,19,19,0.6558998599439776) 100%);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  padding-bottom: 50px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
 }
